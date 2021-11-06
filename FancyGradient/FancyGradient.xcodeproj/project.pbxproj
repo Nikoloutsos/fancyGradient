@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		8CF14AA527369BC40039ECC4 /* FancyGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF14AA327369BC40039ECC4 /* FancyGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CF14AD32736ADA40039ECC4 /* FancyGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF14AD22736ADA40039ECC4 /* FancyGradientView.swift */; };
+		8CF14AD72736B4D10039ECC4 /* FancyGradientView+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF14AD62736B4D10039ECC4 /* FancyGradientView+Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8CF14AA027369BC40039ECC4 /* FancyGradient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FancyGradient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF14AA327369BC40039ECC4 /* FancyGradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FancyGradient.h; sourceTree = "<group>"; };
 		8CF14AA427369BC40039ECC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CF14AD22736ADA40039ECC4 /* FancyGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyGradientView.swift; sourceTree = "<group>"; };
+		8CF14AD62736B4D10039ECC4 /* FancyGradientView+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FancyGradientView+Model.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 			children = (
 				8CF14AA327369BC40039ECC4 /* FancyGradient.h */,
 				8CF14AA427369BC40039ECC4 /* Info.plist */,
+				8CF14AD22736ADA40039ECC4 /* FancyGradientView.swift */,
+				8CF14AD62736B4D10039ECC4 /* FancyGradientView+Model.swift */,
 			);
 			path = FancyGradient;
 			sourceTree = "<group>";
@@ -131,6 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CF14AD32736ADA40039ECC4 /* FancyGradientView.swift in Sources */,
+				8CF14AD72736B4D10039ECC4 /* FancyGradientView+Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +278,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = FancyGradient/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,6 +304,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = FancyGradient/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -15,6 +15,7 @@
 		8CF14AC427369C5A0039ECC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CF14AC227369C5A0039ECC4 /* LaunchScreen.storyboard */; };
 		8CF14ACD27369C900039ECC4 /* FancyGradient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF14ACC27369C900039ECC4 /* FancyGradient.framework */; };
 		8CF14ACE27369C900039ECC4 /* FancyGradient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF14ACC27369C900039ECC4 /* FancyGradient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CF14AD52736AFD90039ECC4 /* UIVIew+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF14AD42736AFD90039ECC4 /* UIVIew+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		8CF14AC327369C5A0039ECC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CF14AC527369C5A0039ECC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CF14ACC27369C900039ECC4 /* FancyGradient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FancyGradient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CF14AD42736AFD90039ECC4 /* UIVIew+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				8CF14AC027369C5A0039ECC4 /* Assets.xcassets */,
 				8CF14AC227369C5A0039ECC4 /* LaunchScreen.storyboard */,
 				8CF14AC527369C5A0039ECC4 /* Info.plist */,
+				8CF14AD42736AFD90039ECC4 /* UIVIew+Extensions.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			files = (
 				8CF14ABC27369C580039ECC4 /* ViewController.swift in Sources */,
 				8CF14AB827369C580039ECC4 /* AppDelegate.swift in Sources */,
+				8CF14AD52736AFD90039ECC4 /* UIVIew+Extensions.swift in Sources */,
 				8CF14ABA27369C580039ECC4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +320,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,6 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
