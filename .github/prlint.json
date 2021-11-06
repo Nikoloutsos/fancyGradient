@@ -1,0 +1,8 @@
+{
+  "title": [
+    {
+      "pattern": "^(build|ci|docs|feat|fix|perf|refactor|style|test):\\s",
+      "message": "‼️ Hmm, your title needs to be prefixed with a topic."
+    }
+  ]
+}
