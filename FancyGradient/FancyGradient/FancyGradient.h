@@ -2,7 +2,7 @@
 //  FancyGradient.h
 //  FancyGradient
 //
-//  Created by Nikoloutsos, Konstantinos, Vodafone on 4/11/21.
+//  Created by Nikoloutsos, Konstantinos, Vodafone on 6/11/21.
 //
 
 #import <Foundation/Foundation.h>

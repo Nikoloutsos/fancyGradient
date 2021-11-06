@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C08D61627346E8C001CFEAA /* FancyGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C08D61427346E8C001CFEAA /* FancyGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CF14AA527369BC40039ECC4 /* FancyGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF14AA327369BC40039ECC4 /* FancyGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8C08D61127346E8C001CFEAA /* FancyGradient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FancyGradient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C08D61427346E8C001CFEAA /* FancyGradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FancyGradient.h; sourceTree = "<group>"; };
-		8C08D61527346E8C001CFEAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CF14AA027369BC40039ECC4 /* FancyGradient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FancyGradient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CF14AA327369BC40039ECC4 /* FancyGradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FancyGradient.h; sourceTree = "<group>"; };
+		8CF14AA427369BC40039ECC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8C08D60E27346E8C001CFEAA /* Frameworks */ = {
+		8CF14A9D27369BC40039ECC4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -27,27 +27,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8C08D60727346E8C001CFEAA = {
+		8CF14A9627369BC40039ECC4 = {
 			isa = PBXGroup;
 			children = (
-				8C08D61327346E8C001CFEAA /* FancyGradient */,
-				8C08D61227346E8C001CFEAA /* Products */,
+				8CF14AA227369BC40039ECC4 /* FancyGradient */,
+				8CF14AA127369BC40039ECC4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8C08D61227346E8C001CFEAA /* Products */ = {
+		8CF14AA127369BC40039ECC4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8C08D61127346E8C001CFEAA /* FancyGradient.framework */,
+				8CF14AA027369BC40039ECC4 /* FancyGradient.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8C08D61327346E8C001CFEAA /* FancyGradient */ = {
+		8CF14AA227369BC40039ECC4 /* FancyGradient */ = {
 			isa = PBXGroup;
 			children = (
-				8C08D61427346E8C001CFEAA /* FancyGradient.h */,
-				8C08D61527346E8C001CFEAA /* Info.plist */,
+				8CF14AA327369BC40039ECC4 /* FancyGradient.h */,
+				8CF14AA427369BC40039ECC4 /* Info.plist */,
 			);
 			path = FancyGradient;
 			sourceTree = "<group>";
@@ -55,25 +55,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8C08D60C27346E8C001CFEAA /* Headers */ = {
+		8CF14A9B27369BC40039ECC4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C08D61627346E8C001CFEAA /* FancyGradient.h in Headers */,
+				8CF14AA527369BC40039ECC4 /* FancyGradient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8C08D61027346E8C001CFEAA /* FancyGradient */ = {
+		8CF14A9F27369BC40039ECC4 /* FancyGradient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C08D61927346E8C001CFEAA /* Build configuration list for PBXNativeTarget "FancyGradient" */;
+			buildConfigurationList = 8CF14AA827369BC40039ECC4 /* Build configuration list for PBXNativeTarget "FancyGradient" */;
 			buildPhases = (
-				8C08D60C27346E8C001CFEAA /* Headers */,
-				8C08D60D27346E8C001CFEAA /* Sources */,
-				8C08D60E27346E8C001CFEAA /* Frameworks */,
-				8C08D60F27346E8C001CFEAA /* Resources */,
+				8CF14A9B27369BC40039ECC4 /* Headers */,
+				8CF14A9C27369BC40039ECC4 /* Sources */,
+				8CF14A9D27369BC40039ECC4 /* Frameworks */,
+				8CF14A9E27369BC40039ECC4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -81,23 +81,24 @@
 			);
 			name = FancyGradient;
 			productName = FancyGradient;
-			productReference = 8C08D61127346E8C001CFEAA /* FancyGradient.framework */;
+			productReference = 8CF14AA027369BC40039ECC4 /* FancyGradient.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8C08D60827346E8C001CFEAA /* Project object */ = {
+		8CF14A9727369BC40039ECC4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					8C08D61027346E8C001CFEAA = {
+					8CF14A9F27369BC40039ECC4 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
-			buildConfigurationList = 8C08D60B27346E8C001CFEAA /* Build configuration list for PBXProject "FancyGradient" */;
+			buildConfigurationList = 8CF14A9A27369BC40039ECC4 /* Build configuration list for PBXProject "FancyGradient" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -105,18 +106,18 @@
 				en,
 				Base,
 			);
-			mainGroup = 8C08D60727346E8C001CFEAA;
-			productRefGroup = 8C08D61227346E8C001CFEAA /* Products */;
+			mainGroup = 8CF14A9627369BC40039ECC4;
+			productRefGroup = 8CF14AA127369BC40039ECC4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C08D61027346E8C001CFEAA /* FancyGradient */,
+				8CF14A9F27369BC40039ECC4 /* FancyGradient */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8C08D60F27346E8C001CFEAA /* Resources */ = {
+		8CF14A9E27369BC40039ECC4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -126,7 +127,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8C08D60D27346E8C001CFEAA /* Sources */ = {
+		8CF14A9C27369BC40039ECC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -136,7 +137,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		8C08D61727346E8C001CFEAA /* Debug */ = {
+		8CF14AA627369BC40039ECC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -200,7 +201,7 @@
 			};
 			name = Debug;
 		};
-		8C08D61827346E8C001CFEAA /* Release */ = {
+		8CF14AA727369BC40039ECC4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -258,9 +259,10 @@
 			};
 			name = Release;
 		};
-		8C08D61A27346E8C001CFEAA /* Debug */ = {
+		8CF14AA927369BC40039ECC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -276,14 +278,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kostasnik.FancyGradient;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		8C08D61B27346E8C001CFEAA /* Release */ = {
+		8CF14AAA27369BC40039ECC4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -307,25 +311,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8C08D60B27346E8C001CFEAA /* Build configuration list for PBXProject "FancyGradient" */ = {
+		8CF14A9A27369BC40039ECC4 /* Build configuration list for PBXProject "FancyGradient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8C08D61727346E8C001CFEAA /* Debug */,
-				8C08D61827346E8C001CFEAA /* Release */,
+				8CF14AA627369BC40039ECC4 /* Debug */,
+				8CF14AA727369BC40039ECC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C08D61927346E8C001CFEAA /* Build configuration list for PBXNativeTarget "FancyGradient" */ = {
+		8CF14AA827369BC40039ECC4 /* Build configuration list for PBXNativeTarget "FancyGradient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8C08D61A27346E8C001CFEAA /* Debug */,
-				8C08D61B27346E8C001CFEAA /* Release */,
+				8CF14AA927369BC40039ECC4 /* Debug */,
+				8CF14AAA27369BC40039ECC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8C08D60827346E8C001CFEAA /* Project object */;
+	rootObject = 8CF14A9727369BC40039ECC4 /* Project object */;
 }
