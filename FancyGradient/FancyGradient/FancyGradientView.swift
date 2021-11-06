@@ -10,13 +10,13 @@ import UIKit
 
 // MARK: - FancyGradientView
 public final class FancyGradientView: UIView {
-    /** Contains all the UI configuration */
     var model: ViewModel
 
     override public class var layerClass: Swift.AnyClass {
         return CAGradientLayer.self
     }
 
+    /// - Parameter model: A viewModel. It's used by view to determine its appearance.
     public init(model: ViewModel) {
         self.model = model
         super.init(frame: .zero)
@@ -40,8 +40,11 @@ public final class FancyGradientView: UIView {
     }
 }
 
+// MARK: Animation functions
 extension FancyGradientView {
-    /** Use this method to start an animation */
+
+    /// Use this method to start an animation.
+    /// - Parameter animation: Determines the type of animation
     public func animate(with animation: ViewModel.Animation) {
         switch animation {
         case .cycle(let duration):
@@ -49,7 +52,7 @@ extension FancyGradientView {
         }
     }
 
-    /** Use this method to STOP any animation */
+    /// Use this method to stop any animation
     public func stopAnimation() {
         guard let gradientLayer = self.layer as? CAGradientLayer else { return }
         gradientLayer.removeAllAnimations()
