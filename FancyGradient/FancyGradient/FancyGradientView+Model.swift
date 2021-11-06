@@ -7,20 +7,23 @@
 
 import UIKit
 
-public extension FancyGradientView {
-    struct ViewModel {
+// MARK: - ViewModel
+extension FancyGradientView {
+    public struct ViewModel {
         let direction: Direction
         let colors: [UIColor]
 
-        public init(direction: FancyGradientView.ViewModel.Direction, colors: [UIColor]) {
+        public init(direction: FancyGradientView.ViewModel.Direction,
+                    colors: [UIColor]) {
             self.direction = direction
             self.colors = colors
         }
     }
 }
 
-public extension FancyGradientView.ViewModel {
-    struct Direction {
+// MARK: - Direction
+extension FancyGradientView.ViewModel {
+    public struct Direction {
         let startPoint: CGPoint
         let endPoint: CGPoint
 
@@ -28,5 +31,13 @@ public extension FancyGradientView.ViewModel {
             self.startPoint = startPoint
             self.endPoint = endPoint
         }
+    }
+}
+
+// MARK: - Animation types
+extension FancyGradientView.ViewModel {
+    public enum Animation {
+        /**  Cycle  animation */
+        case cycle(duration: Double)
     }
 }

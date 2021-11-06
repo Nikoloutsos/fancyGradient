@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 
+// MARK: - FancyGradientView
 public final class FancyGradientView: UIView {
     /** Contains all the UI configuration */
-    private let model: ViewModel
+    var model: ViewModel
 
     override public class var layerClass: Swift.AnyClass {
         return CAGradientLayer.self
@@ -36,5 +37,21 @@ public final class FancyGradientView: UIView {
         gradientLayer.colors = model.colors.map{ $0.cgColor }
         gradientLayer.startPoint = model.direction.startPoint
         gradientLayer.endPoint = model.direction.endPoint
+    }
+}
+
+extension FancyGradientView {
+    /** Use this method to start an animation */
+    public func animate(with animation: ViewModel.Animation) {
+        switch animation {
+        case .cycle(let duration):
+            animateCircle()
+        }
+    }
+
+    /** Use this method to STOP any animation */
+    public func stopAnimation() {
+        guard let gradientLayer = self.layer as? CAGradientLayer else { return }
+        gradientLayer.removeAllAnimations()
     }
 }
