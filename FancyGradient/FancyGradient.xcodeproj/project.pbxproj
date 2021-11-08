@@ -11,6 +11,8 @@
 		8CF14AD32736ADA40039ECC4 /* FancyGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF14AD22736ADA40039ECC4 /* FancyGradientView.swift */; };
 		8CF14AD72736B4D10039ECC4 /* FancyGradientView+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF14AD62736B4D10039ECC4 /* FancyGradientView+Model.swift */; };
 		8CF14AD92737077D0039ECC4 /* FancyGradientView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF14AD82737077D0039ECC4 /* FancyGradientView+Animation.swift */; };
+		8CF14ADC273875220039ECC4 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF14ADB273875220039ECC4 /* Transition.swift */; };
+		8CF14ADE273906820039ECC4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF14ADD273906820039ECC4 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		8CF14AD22736ADA40039ECC4 /* FancyGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyGradientView.swift; sourceTree = "<group>"; };
 		8CF14AD62736B4D10039ECC4 /* FancyGradientView+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FancyGradientView+Model.swift"; sourceTree = "<group>"; };
 		8CF14AD82737077D0039ECC4 /* FancyGradientView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FancyGradientView+Animation.swift"; sourceTree = "<group>"; };
+		8CF14ADB273875220039ECC4 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		8CF14ADD273906820039ECC4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +56,23 @@
 		8CF14AA227369BC40039ECC4 /* FancyGradient */ = {
 			isa = PBXGroup;
 			children = (
+				8CF14ADA273875110039ECC4 /* Animation */,
 				8CF14AA327369BC40039ECC4 /* FancyGradient.h */,
 				8CF14AA427369BC40039ECC4 /* Info.plist */,
 				8CF14AD22736ADA40039ECC4 /* FancyGradientView.swift */,
 				8CF14AD62736B4D10039ECC4 /* FancyGradientView+Model.swift */,
 				8CF14AD82737077D0039ECC4 /* FancyGradientView+Animation.swift */,
+				8CF14ADD273906820039ECC4 /* UIColor+Extension.swift */,
 			);
 			path = FancyGradient;
+			sourceTree = "<group>";
+		};
+		8CF14ADA273875110039ECC4 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				8CF14ADB273875220039ECC4 /* Transition.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +156,9 @@
 			files = (
 				8CF14AD32736ADA40039ECC4 /* FancyGradientView.swift in Sources */,
 				8CF14AD92737077D0039ECC4 /* FancyGradientView+Animation.swift in Sources */,
+				8CF14ADC273875220039ECC4 /* Transition.swift in Sources */,
 				8CF14AD72736B4D10039ECC4 /* FancyGradientView+Model.swift in Sources */,
+				8CF14ADE273906820039ECC4 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

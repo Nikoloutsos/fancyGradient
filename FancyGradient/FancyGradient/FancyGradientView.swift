@@ -10,15 +10,41 @@ import UIKit
 
 // MARK: - FancyGradientView
 public final class FancyGradientView: UIView {
-    var model: ViewModel
+    var currentState: State
+    public var applyAnimationOnChanges: Bool = true
+
+    public var colors: [UIColor] = [] {
+        didSet {
+            updateCurrentState()
+            applyGradient()
+        }
+    }
+
+    public var direction: Direction = .up {
+        didSet {
+            updateCurrentState()
+            applyGradient()
+        }
+    }
 
     override public class var layerClass: Swift.AnyClass {
         return CAGradientLayer.self
     }
 
-    /// - Parameter model: A viewModel. It's used by view to determine its appearance.
-    public init(model: ViewModel) {
-        self.model = model
+    public init(colors: [UIColor],
+                direction: Direction) {
+        self.currentState = .init(direction: direction, colors: colors)
+        self.colors = currentState.colors
+        self.direction = currentState.direction
+        super.init(frame: .zero)
+        applyGradient()
+    }
+
+    public init(hexColors: [String],
+                direction: Direction) {
+        self.currentState = .init(direction: direction, colors: hexColors.map{ UIColor.init(hex: $0) ?? .clear} )
+        self.colors = currentState.colors
+        self.direction = currentState.direction
         super.init(frame: .zero)
         applyGradient()
     }
@@ -34,27 +60,13 @@ public final class FancyGradientView: UIView {
 
     private func applyGradient() {
         guard let gradientLayer = self.layer as? CAGradientLayer else { return }
-        gradientLayer.colors = model.colors.map{ $0.cgColor }
-        gradientLayer.startPoint = model.direction.startPoint
-        gradientLayer.endPoint = model.direction.endPoint
+        gradientLayer.colors = currentState.colors.map{ $0.cgColor }
+        gradientLayer.startPoint = currentState.direction.cgPoints.0
+        gradientLayer.endPoint = currentState.direction.cgPoints.1
+    }
+
+    private func updateCurrentState() {
+        self.currentState = .init(direction: direction, colors: colors)
     }
 }
 
-// MARK: Animation functions
-extension FancyGradientView {
-
-    /// Use this method to start an animation.
-    /// - Parameter animation: Determines the type of animation
-    public func animate(with animation: ViewModel.Animation) {
-        switch animation {
-        case .cycle(let duration):
-            animateCircle()
-        }
-    }
-
-    /// Use this method to stop any animation
-    public func stopAnimation() {
-        guard let gradientLayer = self.layer as? CAGradientLayer else { return }
-        gradientLayer.removeAllAnimations()
-    }
-}

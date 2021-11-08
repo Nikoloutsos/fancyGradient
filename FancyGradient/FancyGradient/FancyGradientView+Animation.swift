@@ -8,84 +8,77 @@
 import Foundation
 import UIKit
 
-// MARK: Circle animation
-extension FancyGradientView {
-    func animateCircle() {
-        nextAnimationStep(startToValue: CornerPoint.leftBottom.cgPoint(),
-                           endToValue: CornerPoint.rightTop.cgPoint(),
-                           animationId: "first")
-    }
 
-    private func nextAnimationStep(startToValue: CGPoint, endToValue: CGPoint, animationId: String) {
+// MARK: Animation functions
+extension FancyGradientView {
+    public func animate(newDirection: Direction, duration: Double, animID: String? = nil) {
         guard let gradientLayer = self.layer as? CAGradientLayer else { return }
         let animationStartPoint = CABasicAnimation(keyPath: "startPoint")
-        animationStartPoint.fromValue = model.direction.startPoint
-        animationStartPoint.toValue = startToValue
+        animationStartPoint.fromValue = currentState.direction.cgPoints.0
+        animationStartPoint.toValue = newDirection.cgPoints.0
 
         let animationEndPoint = CABasicAnimation(keyPath: "endPoint")
-        animationEndPoint.fromValue = model.direction.endPoint
-        animationEndPoint.toValue = endToValue
+        animationEndPoint.fromValue = currentState.direction.cgPoints.1
+        animationEndPoint.toValue = newDirection.cgPoints.1
 
         let animationGroup = CAAnimationGroup()
         animationGroup.animations = [animationStartPoint, animationEndPoint]
-        animationGroup.duration = 1.5
-        animationGroup.setValue(animationId, forKey: "CompletionId")
+        animationGroup.duration = duration
         animationGroup.fillMode = .forwards;
         animationGroup.isRemovedOnCompletion = false
         animationGroup.repeatCount = 1
+        if let id = animID { animationGroup.setValue(id, forKey: "CompletionId") }
+
+        self.currentState = .init(direction: newDirection, colors: currentState.colors)
 
         animationGroup.delegate = self
         gradientLayer.add(animationGroup, forKey: nil)
+    }
 
-        let newDirections = ViewModel.Direction(startPoint: startToValue, endPoint: endToValue)
-        let newModel = ViewModel(direction: newDirections, colors: model.colors)
-        self.model = newModel
+    public func animate(newColors: [UIColor], duration: Double, animID: String? = nil) {
+        guard let gradientLayer = self.layer as? CAGradientLayer else { return }
+        let colorAnimation = CABasicAnimation(keyPath: "colors")
+        colorAnimation.fromValue = currentState.colors.map{ $0.cgColor }
+        colorAnimation.toValue = newColors.map{ $0.cgColor }
+        colorAnimation.duration = duration
+        colorAnimation.fillMode = .forwards;
+        colorAnimation.isRemovedOnCompletion = false
+        colorAnimation.repeatCount = 1
+        if let id = animID { colorAnimation.setValue(id, forKey: "CompletionId") }
+
+        self.currentState = .init(direction: currentState.direction, colors: newColors)
+
+        colorAnimation.delegate = self
+        gradientLayer.add(colorAnimation, forKey: nil)
+    }
+
+    /// Use this method to stop any animation
+    public func stopAnimation() {
+        guard let gradientLayer = self.layer as? CAGradientLayer else { return }
+        gradientLayer.removeAllAnimations()
     }
 }
 
-
-extension FancyGradientView {
-    enum CornerPoint {
-        case leftTop
-        case leftBottom
-        case rightBottom
-        case rightTop
-
-        func cgPoint() -> CGPoint {
-            switch self {
-            case .leftTop:
-                return .init(x: 0, y: 0)
-            case .leftBottom:
-                return .init(x: 0, y: 1)
-            case .rightBottom:
-                return .init(x: 1, y: 1)
-            case .rightTop:
-                return .init(x: 1, y: 0)
-            }
-        }
-    }
-}
 
 // MARK: - CAAnimationDelegate
 extension FancyGradientView: CAAnimationDelegate {
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        let animId = anim.value(forKey: "CompletionId") as? String
-        if animId == "first" {
-            nextAnimationStep(startToValue: CornerPoint.rightBottom.cgPoint(),
-                               endToValue: CornerPoint.leftTop.cgPoint(),
-                               animationId: "second")
-        }else if animId == "second"{
-            nextAnimationStep(startToValue: CornerPoint.rightTop.cgPoint(),
-                               endToValue: CornerPoint.leftBottom.cgPoint(),
-                               animationId: "third")
-        }else if animId == "third" {
-            nextAnimationStep(startToValue: CornerPoint.leftTop.cgPoint(),
-                               endToValue: CornerPoint.rightBottom.cgPoint(),
-                               animationId: "forth")
-        }else if animId == "forth" {
-            nextAnimationStep(startToValue: CornerPoint.leftBottom.cgPoint(),
-                               endToValue: CornerPoint.rightTop.cgPoint(),
-                               animationId: "first")
-        }
+        // TODO: implement me
+    }
+}
+
+public protocol FancyGradientViewDelegate: AnyObject {
+    /// It will only be called if you have specified an animId
+    func animationDidFinished(animId: String)
+}
+
+
+public struct CustomAnimation {
+    
+
+
+
+    func animate() {
+
     }
 }

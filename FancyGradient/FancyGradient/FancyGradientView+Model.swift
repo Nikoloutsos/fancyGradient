@@ -7,43 +7,91 @@
 
 import UIKit
 
-// MARK: - ViewModel
-extension FancyGradientView {
-    public struct ViewModel {
-        let direction: Direction
-        let colors: [UIColor]
+protocol Animation {
+    var animationSteps: [AnimationTransition] { get }
+}
 
-        /// - Parameters:
-        ///   - direction: The gradient direction
-        ///   - colors: The colors used by the gradient.
-        public init(direction: FancyGradientView.ViewModel.Direction,
-                    colors: [UIColor]) {
-            self.direction = direction
-            self.colors = colors
-        }
+public struct AnimationTransition: Animation {
+    var animationSteps: [AnimationTransition] {
+        return [self]
+    }
+
+    let state: State
+    let timeToTransitionToStateInSeconds: Double
+
+    public init(colors: [UIColor], direction: Direction, time: Double) {
+        self.state = .init(direction: direction, colors: colors)
+        self.timeToTransitionToStateInSeconds = time
     }
 }
 
-// MARK: - Direction
-extension FancyGradientView.ViewModel {
-    public struct Direction {
-        let startPoint: CGPoint
-        let endPoint: CGPoint
+public struct CompositeTransition: Animation {
+    var animationSteps: [AnimationTransition] {
+        return animationTransitions
+    }
 
-        /// - Parameters:
-        ///   - startPoint: The starting point of gradient. (0,0) is topleft and (1,1) bottom right
-        ///   - endPoint: The ending point of gradient. (0,0) is topleft and (1,1) bottom right
-        public init(startPoint: CGPoint, endPoint: CGPoint) {
-            self.startPoint = startPoint
-            self.endPoint = endPoint
-        }
+    let animationTransitions: [AnimationTransition]
+
+    public init(animationTransitions: [AnimationTransition]) {
+        self.animationTransitions = animationTransitions
     }
 }
 
-// MARK: - Animation types
-extension FancyGradientView.ViewModel {
-    /// The different types of animations
-    public enum Animation {
-        case cycle(duration: Double)
+
+public struct State {
+    let direction: Direction
+    let colors: [UIColor]
+
+    /// - Parameters:
+    ///   - direction: The gradient direction
+    ///   - colors: The colors used by the gradient.
+    public init(direction: Direction,
+                colors: [UIColor]) {
+        self.direction = direction
+        self.colors = colors
+    }
+}
+
+
+public enum Direction {
+    /// ⬆️
+    case up
+    /// ⬅️
+    case left
+    /// ⬇️
+    case down
+    //// ➡️
+    case right
+    /// ↗️
+    case diagonalBottomLeftTopRight
+    /// ↘️
+    case diagonalTopLeftBottomRight
+    /// ↙️
+    case diagonalTopRightBottomLeft
+    /// ↖️
+    case diagonalBottomRightTopLeft
+    case custom(startPoint: CGPoint, endPoint: CGPoint)
+
+    var cgPoints: (CGPoint, CGPoint) {
+        switch self {
+        case .up:
+            return (CGPoint(x: 0, y: 1), CGPoint(x: 0, y: 0))
+        case .left:
+            return (CGPoint(x: 1, y: 0), CGPoint(x: 0, y: 0))
+        case .down:
+            return (CGPoint(x: 0, y: 0), CGPoint(x: 0, y: 1))
+        case .right:
+            return (CGPoint(x: 0, y: 0), CGPoint(x: 1, y: 0))
+        case .diagonalBottomLeftTopRight:
+            return (CGPoint(x: 0, y: 1), CGPoint(x: 1, y: 0))
+        case .diagonalTopLeftBottomRight:
+            return (CGPoint(x: 0, y: 0), CGPoint(x: 1, y: 1))
+        case .diagonalTopRightBottomLeft:
+            return (CGPoint(x: 1, y: 0), CGPoint(x: 0, y: 1))
+        case .diagonalBottomRightTopLeft:
+            return (CGPoint(x: 1, y: 1), CGPoint(x: 0, y: 0))
+        case .custom(startPoint: let startPoint, endPoint: let endPoint):
+            return (startPoint, endPoint)
+        }
     }
 }
