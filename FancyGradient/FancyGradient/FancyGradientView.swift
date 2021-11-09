@@ -63,6 +63,7 @@ public final class FancyGradientView: UIView {
         gradientLayer.colors = currentState.colors.map{ $0.cgColor }
         gradientLayer.startPoint = currentState.direction.cgPoints.0
         gradientLayer.endPoint = currentState.direction.cgPoints.1
+        gradientLayer.type = .axial
     }
 
     private func updateCurrentState() {

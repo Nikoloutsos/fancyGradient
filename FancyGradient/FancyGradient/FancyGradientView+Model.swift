@@ -37,7 +37,6 @@ public struct CompositeTransition: Animation {
     }
 }
 
-
 public struct State {
     let direction: Direction
     let colors: [UIColor]
@@ -51,7 +50,6 @@ public struct State {
         self.colors = colors
     }
 }
-
 
 public enum Direction {
     /// ⬆️
