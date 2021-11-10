@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+ 
 public enum Direction {
     /// ⬆️
     case up

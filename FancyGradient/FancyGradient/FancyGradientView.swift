@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 
 // MARK: - FancyGradientView
-/// An animated GradientView. Supports custom animations and will make your look fancy and sexy 🚀
+/// An animated GradientView. Supports custom animations and will make your UI look fancy and sexy 🚀
 public final class FancyGradientView: UIView {
     /// When provided animID to your CustomAnimation this delegate will notify you about animation finish.
-    public weak var animationDelegate: FancyGradientViewDelegate?
+    public weak var delegate: FancyGradientViewDelegate?
 
     /// The colors that the gradient is going to have.  🎨
     public var colors: [UIColor] = [] {

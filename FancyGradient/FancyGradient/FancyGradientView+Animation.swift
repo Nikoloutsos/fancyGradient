@@ -10,16 +10,32 @@ import UIKit
 
 // MARK: Animation functions
 extension FancyGradientView {
+
+    /// Animate with a custom animation
+    /// - Parameter animation: The custom animation
     public func animate(animation: CustomAnimation) {
+        animation.caAnimation.delegate = self
         gradientLayer.add(animation.caAnimation, forKey: nil)
     }
 
+
+    /// Animatie direction
+    /// - Parameters:
+    ///   - newDirection: new gradient direction value.
+    ///   - duration: the duration of animation in seconds.
+    ///   - animID: animID + delegate for get notified when animation ended.
     public func animate(newDirection: Direction, duration: Double, animID: String? = nil) {
         let customAnimation = CustomAnimation(animID: animID)
             .then(DirectionAnimation(newDirection: newDirection, duration: duration))
         animate(animation: customAnimation)
     }
 
+
+    /// <#Description#>
+    /// - Parameters:
+    ///   - newColors: new gradient colors value
+    ///   - duration: the duration of animation in seconds.
+    ///   - animID: animID + delegate for get notified when animation ended.
     public func animate(newColors: [UIColor], duration: Double, animID: String? = nil) {
         let customAnimation = CustomAnimation(animID: animID)
             .then(ColorAnimation(newColors: newColors, duration: duration))
@@ -33,11 +49,13 @@ extension FancyGradientView {
     }
 }
 
+/// Base protocol for all Animations
 public protocol Animationable {
     var caAnimation: CAAnimation { get }
     var duration: Double { get }
 }
 
+/// Animation for animating the direction of the gradient
 public class DirectionAnimation: Animationable {
     let direction: Direction
     public let duration: Double
@@ -64,6 +82,7 @@ public class DirectionAnimation: Animationable {
     }
 }
 
+/// Animation for animating the color of the gradient
 public class ColorAnimation: Animationable {
     let colors: [UIColor]
     public let duration: Double
@@ -83,6 +102,7 @@ public class ColorAnimation: Animationable {
     }
 }
 
+/// Animation used for adding a delay. It's empty it doesn't animate anything.
 public class EmptyAnimation: Animationable {
     public let duration: Double
 
@@ -137,24 +157,10 @@ public class CustomAnimation: Animationable {
         self.animID = animID
     }
 
-    /// Add the next animation that you want to apply
+    /// Adds the next animation that you want to apply in the chain
     public func then(_ animation: Animationable) -> Self {
         animationsQueue.append([animation])
         return self
-    }
-
-    /// Add the next animation that you want to apply
-    public func then(_ operator: Operator) -> Self {
-        switch `operator` {
-        case .group(let animationGroup):
-            animationsQueue.append(animationGroup)
-            break
-        }
-        return self
-    }
-
-    public enum Operator {
-        case group(animations: [Animationable])
     }
 }
 
@@ -167,7 +173,7 @@ public protocol FancyGradientViewDelegate: AnyObject {
 extension FancyGradientView: CAAnimationDelegate {
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if let animID = anim.value(forKey: "CompletionId") as? String {
-            animationDelegate?.animationDidFinished(animId: animID)
+            delegate?.animationDidFinished(animId: animID)
         }
     }
 }
