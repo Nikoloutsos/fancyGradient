@@ -7,23 +7,6 @@
 
 import UIKit
 
-public struct State {
-    let direction: Direction
-    let colors: [UIColor]
-    let type: CAGradientLayerType
-
-    /// - Parameters:
-    ///   - direction: The gradient direction
-    ///   - colors: The colors used by the gradient.
-    public init(direction: Direction,
-                colors: [UIColor],
-                type: CAGradientLayerType) {
-        self.direction = direction
-        self.colors = colors
-        self.type = type
-    }
-}
-
 public enum Direction {
     /// ⬆️
     case up

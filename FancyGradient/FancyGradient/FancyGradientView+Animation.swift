@@ -33,12 +33,6 @@ extension FancyGradientView {
     }
 }
 
-public protocol FancyGradientViewDelegate: AnyObject {
-    /// It will only be called if you have specified an animId
-    func animationDidFinished(animId: String)
-}
-
-
 public protocol Animationable {
     var caAnimation: CAAnimation { get }
     var duration: Double { get }
@@ -105,8 +99,10 @@ public class EmptyAnimation: Animationable {
     }
 }
 
+/// CustomAnimation can be used for creating any animation.
+/// The only barrier is your imagination 🌈
 public class CustomAnimation: Animationable {
-    var animationsQueue: [[Animationable]] = []
+    private var animationsQueue: [[Animationable]] = []
     let animID: String?
 
     lazy public var caAnimation: CAAnimation = {
@@ -141,11 +137,13 @@ public class CustomAnimation: Animationable {
         self.animID = animID
     }
 
+    /// Add the next animation that you want to apply
     public func then(_ animation: Animationable) -> Self {
         animationsQueue.append([animation])
         return self
     }
 
+    /// Add the next animation that you want to apply
     public func then(_ operator: Operator) -> Self {
         switch `operator` {
         case .group(let animationGroup):
@@ -160,9 +158,16 @@ public class CustomAnimation: Animationable {
     }
 }
 
+/// Get notified when animation terminated. Remember you have to set an animID to your CustomAnimation.
+public protocol FancyGradientViewDelegate: AnyObject {
+    func animationDidFinished(animId: String)
+}
+
 // MARK: - CAAnimationDelegate
 extension FancyGradientView: CAAnimationDelegate {
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        print(anim.value(forKey: "CompletionId"))
+        if let animID = anim.value(forKey: "CompletionId") as? String {
+            animationDelegate?.animationDidFinished(animId: animID)
+        }
     }
 }

@@ -9,27 +9,28 @@ import Foundation
 import UIKit
 
 // MARK: - FancyGradientView
+/// An animated GradientView. Supports custom animations and will make your look fancy and sexy 🚀
 public final class FancyGradientView: UIView {
-    var currentState: State
-    public var applyAnimationOnChanges: Bool = true
+    /// When provided animID to your CustomAnimation this delegate will notify you about animation finish.
+    public weak var animationDelegate: FancyGradientViewDelegate?
 
+    /// The colors that the gradient is going to have.  🎨
     public var colors: [UIColor] = [] {
         didSet {
-            updateCurrentState()
             applyGradient()
         }
     }
 
+    /// The direction of the gradient.
     public var direction: Direction = .up {
         didSet {
-            updateCurrentState()
             applyGradient()
         }
     }
 
+    /// The gradient type (e.g axial, conic etc)
     public var type: CAGradientLayerType = .axial {
         didSet {
-            updateCurrentState()
             applyGradient()
         }
     }
@@ -42,22 +43,17 @@ public final class FancyGradientView: UIView {
         return CAGradientLayer.self
     }
 
+    /// Initializer
+    /// - Parameters:
+    ///   - colors: Gradient colors  (e.g [black, red])
+    ///   - direction: Direction of gradient  (e.g .up)
+    ///   - type: Gradient type (e.g axial)
     public init(colors: [UIColor],
                 direction: Direction,
                 type: CAGradientLayerType) {
-        self.currentState = .init(direction: direction, colors: colors, type: type)
-        self.colors = currentState.colors
-        self.direction = currentState.direction
+        self.colors = colors
+        self.direction = direction
         self.type = type
-        super.init(frame: .zero)
-        applyGradient()
-    }
-
-    public init(hexColors: [String],
-                direction: Direction) {
-        self.currentState = .init(direction: direction, colors: hexColors.map{ UIColor.init(hex: $0) ?? .clear}, type: type)
-        self.colors = currentState.colors
-        self.direction = currentState.direction
         super.init(frame: .zero)
         applyGradient()
     }
@@ -73,14 +69,10 @@ public final class FancyGradientView: UIView {
 
     private func applyGradient() {
         guard let gradientLayer = self.layer as? CAGradientLayer else { return }
-        gradientLayer.colors = currentState.colors.map{ $0.cgColor }
-        gradientLayer.startPoint = currentState.direction.cgPoints.0
-        gradientLayer.endPoint = currentState.direction.cgPoints.1
-        gradientLayer.type = currentState.type
-    }
-
-    private func updateCurrentState() {
-        self.currentState = .init(direction: direction, colors: colors, type: type)
+        gradientLayer.colors = colors.map{ $0.cgColor }
+        gradientLayer.startPoint = direction.cgPoints.0
+        gradientLayer.endPoint = direction.cgPoints.1
+        gradientLayer.type = type
     }
 }
 
