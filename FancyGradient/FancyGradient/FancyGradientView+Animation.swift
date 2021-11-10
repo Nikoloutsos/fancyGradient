@@ -18,8 +18,7 @@ extension FancyGradientView {
         gradientLayer.add(animation.caAnimation, forKey: nil)
     }
 
-
-    /// Animatie direction
+    /// Animate gradient direction
     /// - Parameters:
     ///   - newDirection: new gradient direction value.
     ///   - duration: the duration of animation in seconds.
@@ -30,8 +29,7 @@ extension FancyGradientView {
         animate(animation: customAnimation)
     }
 
-
-    /// <#Description#>
+    /// Animate gradient colors
     /// - Parameters:
     ///   - newColors: new gradient colors value
     ///   - duration: the duration of animation in seconds.
@@ -119,6 +117,28 @@ public class EmptyAnimation: Animationable {
     }
 }
 
+/// Animation used for simultaneously run 2 or more Animations. For example animate color and direction of gradient at the same time.
+public class CombineAnimation: Animationable {
+    let animations: [Animationable]
+
+    lazy public var caAnimation: CAAnimation = {
+        let group = CAAnimationGroup()
+        group.animations = animations.map(\.caAnimation)
+        group.duration = duration
+        group.repeatCount = 1
+        group.fillMode = .forwards
+        return group
+    }()
+
+    lazy public var duration: Double = {
+        animations.map(\.duration).max() ?? 0
+    }()
+
+    public init(_ animations: Animationable...) {
+        self.animations = animations
+    }
+}
+
 /// CustomAnimation can be used for creating any animation.
 /// The only barrier is your imagination 🌈
 public class CustomAnimation: Animationable {
@@ -129,7 +149,7 @@ public class CustomAnimation: Animationable {
         var currentDuration: Double = 0
         let caAnimationsGroups: [CAAnimationGroup] = animationsQueue.map {
             let group = CAAnimationGroup()
-            group.animations = $0.map { $0.caAnimation }
+            group.animations = $0.map(\.caAnimation)
             group.duration = $0.reduce(0, {durationSum, animation in durationSum + animation.duration})
             group.repeatCount = 1
             group.fillMode = .forwards
@@ -172,7 +192,7 @@ public protocol FancyGradientViewDelegate: AnyObject {
 // MARK: - CAAnimationDelegate
 extension FancyGradientView: CAAnimationDelegate {
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        if let animID = anim.value(forKey: "CompletionId") as? String {
+        if let animID = anim.value(forKey: "CompletionId") as? String, flag {
             delegate?.animationDidFinished(animId: animID)
         }
     }
