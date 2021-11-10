@@ -10,40 +10,21 @@ import UIKit
 
 // MARK: Animation functions
 extension FancyGradientView {
-    public func foo() {
-        let animation = CABasicAnimation(keyPath: "colors")
-        animation.toValue = [UIColor.red, UIColor.green].map{ $0.cgColor }
-        animation.duration = 3
-        animation.fillMode = .forwards;
-        animation.repeatCount = 1
-
-        let animationGroup1 = CAAnimationGroup()
-        animationGroup1.animations = [animation]
-        animationGroup1.duration = 3
-        animationGroup1.repeatCount = 1
-        animationGroup1.fillMode = .forwards
-
-
-        let animationGroup2 = CAAnimationGroup()
-        animationGroup2.animations = [animation]
-        animationGroup2.duration = 3
-        animationGroup2.repeatCount = 1
-        animationGroup2.fillMode = .forwards
-        animationGroup2.isRemovedOnCompletion = false
-
-        guard let gradientLayer = self.layer as? CAGradientLayer else { return }
-        gradientLayer.add(animationGroup2, forKey: nil)
-    }
-
-
     public func animate(animation: CustomAnimation) {
-        guard let gradientLayer = self.layer as? CAGradientLayer else { return }
         gradientLayer.add(animation.caAnimation, forKey: nil)
     }
 
-    public func animate(newDirection: Direction, duration: Double, animID: String? = nil) {}
+    public func animate(newDirection: Direction, duration: Double, animID: String? = nil) {
+        let customAnimation = CustomAnimation(animID: animID)
+            .then(DirectionAnimation(newDirection: newDirection, duration: duration))
+        animate(animation: customAnimation)
+    }
 
-    public func animate(newColors: [UIColor], duration: Double, animID: String? = nil) {}
+    public func animate(newColors: [UIColor], duration: Double, animID: String? = nil) {
+        let customAnimation = CustomAnimation(animID: animID)
+            .then(ColorAnimation(newColors: newColors, duration: duration))
+        animate(animation: customAnimation)
+    }
 
     /// Use this method to stop any animation
     public func stopAnimation() {
@@ -104,6 +85,22 @@ public class ColorAnimation: Animationable {
 
     public init(newColors: [UIColor], duration: Double) {
         self.colors = newColors
+        self.duration = duration
+    }
+}
+
+public class EmptyAnimation: Animationable {
+    public let duration: Double
+
+    lazy public var caAnimation: CAAnimation = {
+        let animation = CABasicAnimation(keyPath: "")
+        animation.duration = duration
+        animation.fillMode = .forwards;
+        animation.repeatCount = 1
+        return animation
+    }()
+
+    public init(duration: Double) {
         self.duration = duration
     }
 }

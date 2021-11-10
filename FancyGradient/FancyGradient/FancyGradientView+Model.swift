@@ -7,47 +7,20 @@
 
 import UIKit
 
-protocol Animation {
-    var animationSteps: [AnimationTransition] { get }
-}
-
-public struct AnimationTransition: Animation {
-    var animationSteps: [AnimationTransition] {
-        return [self]
-    }
-
-    let state: State
-    let timeToTransitionToStateInSeconds: Double
-
-    public init(colors: [UIColor], direction: Direction, time: Double) {
-        self.state = .init(direction: direction, colors: colors)
-        self.timeToTransitionToStateInSeconds = time
-    }
-}
-
-public struct CompositeTransition: Animation {
-    var animationSteps: [AnimationTransition] {
-        return animationTransitions
-    }
-
-    let animationTransitions: [AnimationTransition]
-
-    public init(animationTransitions: [AnimationTransition]) {
-        self.animationTransitions = animationTransitions
-    }
-}
-
 public struct State {
     let direction: Direction
     let colors: [UIColor]
+    let type: CAGradientLayerType
 
     /// - Parameters:
     ///   - direction: The gradient direction
     ///   - colors: The colors used by the gradient.
     public init(direction: Direction,
-                colors: [UIColor]) {
+                colors: [UIColor],
+                type: CAGradientLayerType) {
         self.direction = direction
         self.colors = colors
+        self.type = type
     }
 }
 

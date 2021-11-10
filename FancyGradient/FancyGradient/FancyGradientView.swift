@@ -27,22 +27,35 @@ public final class FancyGradientView: UIView {
         }
     }
 
+    public var type: CAGradientLayerType = .axial {
+        didSet {
+            updateCurrentState()
+            applyGradient()
+        }
+    }
+
+    var gradientLayer: CAGradientLayer {
+         self.layer as! CAGradientLayer
+    }
+
     override public class var layerClass: Swift.AnyClass {
         return CAGradientLayer.self
     }
 
     public init(colors: [UIColor],
-                direction: Direction) {
-        self.currentState = .init(direction: direction, colors: colors)
+                direction: Direction,
+                type: CAGradientLayerType) {
+        self.currentState = .init(direction: direction, colors: colors, type: type)
         self.colors = currentState.colors
         self.direction = currentState.direction
+        self.type = type
         super.init(frame: .zero)
         applyGradient()
     }
 
     public init(hexColors: [String],
                 direction: Direction) {
-        self.currentState = .init(direction: direction, colors: hexColors.map{ UIColor.init(hex: $0) ?? .clear} )
+        self.currentState = .init(direction: direction, colors: hexColors.map{ UIColor.init(hex: $0) ?? .clear}, type: type)
         self.colors = currentState.colors
         self.direction = currentState.direction
         super.init(frame: .zero)
@@ -63,11 +76,11 @@ public final class FancyGradientView: UIView {
         gradientLayer.colors = currentState.colors.map{ $0.cgColor }
         gradientLayer.startPoint = currentState.direction.cgPoints.0
         gradientLayer.endPoint = currentState.direction.cgPoints.1
-        gradientLayer.type = .axial
+        gradientLayer.type = currentState.type
     }
 
     private func updateCurrentState() {
-        self.currentState = .init(direction: direction, colors: colors)
+        self.currentState = .init(direction: direction, colors: colors, type: type)
     }
 }
 
