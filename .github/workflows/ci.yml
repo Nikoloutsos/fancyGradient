@@ -1,0 +1,15 @@
+name: ci
+
+ on:
+   push:
+     branches: [ master, develop ]
+   pull_request:
+     branches: [ master, deevelop ]
+
+ jobs:
+   build:
+     runs-on: macos-latest
+     steps:
+     - uses: actions/checkout@v2
+     - name: Build FancyGradient
+       run: xcodebuild -workspace Fancy-Gradient.xcworkspace -scheme FancyGradient
