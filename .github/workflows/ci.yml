@@ -1,15 +1,17 @@
 name: ci
 
- on:
-   push:
-     branches: [ master ]
-   pull_request:
-     branches: [ master ]
+on:
+  push:
+    branches: [ master, 'develop' ]
+  pull_request:
+    branches: [ master, 'deveelop' ]
 
- jobs:
-   build:
-     runs-on: macos-latest
-     steps:
-     - uses: actions/checkout@v2
-     - name: Build FancyGradient
-       run: xcodebuild -workspace Fancy-Gradient.xcworkspace -scheme FancyGradient
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build FancyGradient
+      run: xcodebuild -workspace Fancy-Gradient.xcworkspace -scheme FancyGradient
