@@ -4,11 +4,9 @@ name: ci
    push:
      branches: 
       - master
-      - 'develop'
    pull_request:
      branches: 
       - master
-      - 'develop'
 
  jobs:
    build:
