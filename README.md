@@ -63,6 +63,7 @@ let myCustomAnimation = CustomAnimation(animID: "myAnimationID")
 | EmptyAnimation  | Does nothing. Useful for adding delay |
 | DirectionAnimation  | Animate gradient Direction |
 | ColorAnimation  | Animate gradient colors |
+| ColorStopsAnimation  | Animate the location of each gradient color stop|
 | CombineAnimation  | Combine 2 or more animations to start simultaneously |
 
 
