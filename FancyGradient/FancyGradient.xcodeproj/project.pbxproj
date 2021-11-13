@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CD517EA2740632C0082DCC9 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD517E92740632C0082DCC9 /* UIColor+Extensions.swift */; };
+		8CD517ED2740637E0082DCC9 /* Animationable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD517EC2740637E0082DCC9 /* Animationable.swift */; };
+		8CD517EF274063B70082DCC9 /* CustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD517EE274063B70082DCC9 /* CustomAnimation.swift */; };
+		8CD517F2274064280082DCC9 /* EmptyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD517F1274064280082DCC9 /* EmptyAnimation.swift */; };
+		8CD517F42740644D0082DCC9 /* CombineAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD517F32740644D0082DCC9 /* CombineAnimation.swift */; };
+		8CD517F62740645A0082DCC9 /* DirectionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD517F52740645A0082DCC9 /* DirectionAnimation.swift */; };
+		8CD517F8274064680082DCC9 /* ColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD517F7274064680082DCC9 /* ColorAnimation.swift */; };
+		8CD517FA274064E10082DCC9 /* ColorStopsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD517F9274064E10082DCC9 /* ColorStopsAnimation.swift */; };
 		8CF14AA527369BC40039ECC4 /* FancyGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF14AA327369BC40039ECC4 /* FancyGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CF14AD32736ADA40039ECC4 /* FancyGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF14AD22736ADA40039ECC4 /* FancyGradientView.swift */; };
 		8CF14AD72736B4D10039ECC4 /* FancyGradientView+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF14AD62736B4D10039ECC4 /* FancyGradientView+Model.swift */; };
 		8CF14AD92737077D0039ECC4 /* FancyGradientView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF14AD82737077D0039ECC4 /* FancyGradientView+Animation.swift */; };
-		8CF14ADC273875220039ECC4 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF14ADB273875220039ECC4 /* Transition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8CD517E92740632C0082DCC9 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		8CD517EC2740637E0082DCC9 /* Animationable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animationable.swift; sourceTree = "<group>"; };
+		8CD517EE274063B70082DCC9 /* CustomAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimation.swift; sourceTree = "<group>"; };
+		8CD517F1274064280082DCC9 /* EmptyAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyAnimation.swift; sourceTree = "<group>"; };
+		8CD517F32740644D0082DCC9 /* CombineAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineAnimation.swift; sourceTree = "<group>"; };
+		8CD517F52740645A0082DCC9 /* DirectionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionAnimation.swift; sourceTree = "<group>"; };
+		8CD517F7274064680082DCC9 /* ColorAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAnimation.swift; sourceTree = "<group>"; };
+		8CD517F9274064E10082DCC9 /* ColorStopsAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStopsAnimation.swift; sourceTree = "<group>"; };
 		8CF14AA027369BC40039ECC4 /* FancyGradient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FancyGradient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF14AA327369BC40039ECC4 /* FancyGradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FancyGradient.h; sourceTree = "<group>"; };
 		8CF14AA427369BC40039ECC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CF14AD22736ADA40039ECC4 /* FancyGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyGradientView.swift; sourceTree = "<group>"; };
 		8CF14AD62736B4D10039ECC4 /* FancyGradientView+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FancyGradientView+Model.swift"; sourceTree = "<group>"; };
 		8CF14AD82737077D0039ECC4 /* FancyGradientView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FancyGradientView+Animation.swift"; sourceTree = "<group>"; };
-		8CF14ADB273875220039ECC4 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +49,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CD517E8274063010082DCC9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8CD517E92740632C0082DCC9 /* UIColor+Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8CD517F0274063F70082DCC9 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				8CD517EE274063B70082DCC9 /* CustomAnimation.swift */,
+				8CD517F7274064680082DCC9 /* ColorAnimation.swift */,
+				8CD517F52740645A0082DCC9 /* DirectionAnimation.swift */,
+				8CD517F9274064E10082DCC9 /* ColorStopsAnimation.swift */,
+				8CD517F1274064280082DCC9 /* EmptyAnimation.swift */,
+				8CD517F32740644D0082DCC9 /* CombineAnimation.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		8CF14A9627369BC40039ECC4 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +89,7 @@
 		8CF14AA227369BC40039ECC4 /* FancyGradient */ = {
 			isa = PBXGroup;
 			children = (
+				8CD517E8274063010082DCC9 /* Utils */,
 				8CF14ADA273875110039ECC4 /* Animation */,
 				8CF14AA327369BC40039ECC4 /* FancyGradient.h */,
 				8CF14AA427369BC40039ECC4 /* Info.plist */,
@@ -67,7 +103,8 @@
 		8CF14ADA273875110039ECC4 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				8CF14ADB273875220039ECC4 /* Transition.swift */,
+				8CD517EC2740637E0082DCC9 /* Animationable.swift */,
+				8CD517F0274063F70082DCC9 /* Animations */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -152,9 +189,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CF14AD32736ADA40039ECC4 /* FancyGradientView.swift in Sources */,
+				8CD517ED2740637E0082DCC9 /* Animationable.swift in Sources */,
+				8CD517EA2740632C0082DCC9 /* UIColor+Extensions.swift in Sources */,
 				8CF14AD92737077D0039ECC4 /* FancyGradientView+Animation.swift in Sources */,
-				8CF14ADC273875220039ECC4 /* Transition.swift in Sources */,
 				8CF14AD72736B4D10039ECC4 /* FancyGradientView+Model.swift in Sources */,
+				8CD517F2274064280082DCC9 /* EmptyAnimation.swift in Sources */,
+				8CD517F8274064680082DCC9 /* ColorAnimation.swift in Sources */,
+				8CD517F42740644D0082DCC9 /* CombineAnimation.swift in Sources */,
+				8CD517FA274064E10082DCC9 /* ColorStopsAnimation.swift in Sources */,
+				8CD517EF274063B70082DCC9 /* CustomAnimation.swift in Sources */,
+				8CD517F62740645A0082DCC9 /* DirectionAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,8 +331,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9Z9ZV734X6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -313,8 +359,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9Z9ZV734X6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
