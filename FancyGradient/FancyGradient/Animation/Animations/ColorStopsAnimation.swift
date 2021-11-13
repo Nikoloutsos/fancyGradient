@@ -22,6 +22,10 @@ public class ColorStopsAnimation: Animationable {
         return animation
     }()
 
+    /// - Parameters:
+    ///   - colorStops: The gradient stops are specified as values between 0 and 1.
+    /// The values must be monotonically increasing. If nil, the stops are spread uniformly across the range.
+    ///   - duration: animation duration in seconds
     public init(colorStops: [Double]?, duration: Double) {
         self.colorStops = colorStops
         self.duration = duration
