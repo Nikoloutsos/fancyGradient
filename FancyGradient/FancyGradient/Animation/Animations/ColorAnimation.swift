@@ -26,5 +26,13 @@ public class ColorAnimation: Animationable {
         self.colors = newColors
         self.duration = duration
     }
+
+    /// - Parameters:
+    ///   - newColors: values should be hex strings (e.g #FF0000)
+    ///   - duration: animation duration in seconds
+    public init(newColors: [String], duration: Double) {
+        self.colors = newColors.map{ .init(hexString: $0) }
+        self.duration = duration
+    }
 }
 
