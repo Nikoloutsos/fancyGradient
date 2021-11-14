@@ -7,24 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CD517EA2740632C0082DCC9 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD517E92740632C0082DCC9 /* UIColor+Extensions.swift */; };
+		8CD517ED2740637E0082DCC9 /* Animationable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD517EC2740637E0082DCC9 /* Animationable.swift */; };
+		8CD517EF274063B70082DCC9 /* CustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD517EE274063B70082DCC9 /* CustomAnimation.swift */; };
+		8CD517F2274064280082DCC9 /* EmptyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD517F1274064280082DCC9 /* EmptyAnimation.swift */; };
+		8CD517F42740644D0082DCC9 /* CombineAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD517F32740644D0082DCC9 /* CombineAnimation.swift */; };
+		8CD517F62740645A0082DCC9 /* DirectionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD517F52740645A0082DCC9 /* DirectionAnimation.swift */; };
+		8CD517F8274064680082DCC9 /* ColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD517F7274064680082DCC9 /* ColorAnimation.swift */; };
+		8CD517FA274064E10082DCC9 /* ColorStopsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD517F9274064E10082DCC9 /* ColorStopsAnimation.swift */; };
+		8CD51802274118700082DCC9 /* FancyGradientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD51801274118700082DCC9 /* FancyGradientTests.swift */; };
+		8CD51804274118700082DCC9 /* FancyGradient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF14AA027369BC40039ECC4 /* FancyGradient.framework */; };
+		8CD5180C2741201E0082DCC9 /* FancyGradientViewDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD5180B2741201E0082DCC9 /* FancyGradientViewDelegateSpy.swift */; };
+		8CD5180E274120F80082DCC9 /* CustomAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD5180D274120F80082DCC9 /* CustomAnimationTests.swift */; };
 		8CF14AA527369BC40039ECC4 /* FancyGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF14AA327369BC40039ECC4 /* FancyGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CF14AD32736ADA40039ECC4 /* FancyGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF14AD22736ADA40039ECC4 /* FancyGradientView.swift */; };
 		8CF14AD72736B4D10039ECC4 /* FancyGradientView+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF14AD62736B4D10039ECC4 /* FancyGradientView+Model.swift */; };
 		8CF14AD92737077D0039ECC4 /* FancyGradientView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF14AD82737077D0039ECC4 /* FancyGradientView+Animation.swift */; };
-		8CF14ADC273875220039ECC4 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF14ADB273875220039ECC4 /* Transition.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8CD51805274118700082DCC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CF14A9727369BC40039ECC4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CF14A9F27369BC40039ECC4;
+			remoteInfo = FancyGradient;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		8CD517E92740632C0082DCC9 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		8CD517EC2740637E0082DCC9 /* Animationable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animationable.swift; sourceTree = "<group>"; };
+		8CD517EE274063B70082DCC9 /* CustomAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimation.swift; sourceTree = "<group>"; };
+		8CD517F1274064280082DCC9 /* EmptyAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyAnimation.swift; sourceTree = "<group>"; };
+		8CD517F32740644D0082DCC9 /* CombineAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineAnimation.swift; sourceTree = "<group>"; };
+		8CD517F52740645A0082DCC9 /* DirectionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionAnimation.swift; sourceTree = "<group>"; };
+		8CD517F7274064680082DCC9 /* ColorAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAnimation.swift; sourceTree = "<group>"; };
+		8CD517F9274064E10082DCC9 /* ColorStopsAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStopsAnimation.swift; sourceTree = "<group>"; };
+		8CD517FF274118700082DCC9 /* FancyGradientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FancyGradientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CD51801274118700082DCC9 /* FancyGradientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyGradientTests.swift; sourceTree = "<group>"; };
+		8CD51803274118700082DCC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CD5180B2741201E0082DCC9 /* FancyGradientViewDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyGradientViewDelegateSpy.swift; sourceTree = "<group>"; };
+		8CD5180D274120F80082DCC9 /* CustomAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimationTests.swift; sourceTree = "<group>"; };
 		8CF14AA027369BC40039ECC4 /* FancyGradient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FancyGradient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF14AA327369BC40039ECC4 /* FancyGradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FancyGradient.h; sourceTree = "<group>"; };
 		8CF14AA427369BC40039ECC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CF14AD22736ADA40039ECC4 /* FancyGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyGradientView.swift; sourceTree = "<group>"; };
 		8CF14AD62736B4D10039ECC4 /* FancyGradientView+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FancyGradientView+Model.swift"; sourceTree = "<group>"; };
 		8CF14AD82737077D0039ECC4 /* FancyGradientView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FancyGradientView+Animation.swift"; sourceTree = "<group>"; };
-		8CF14ADB273875220039ECC4 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8CD517FC274118700082DCC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CD51804274118700082DCC9 /* FancyGradient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8CF14A9D27369BC40039ECC4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,10 +76,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CD517E8274063010082DCC9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8CD517E92740632C0082DCC9 /* UIColor+Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8CD517F0274063F70082DCC9 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				8CD517EE274063B70082DCC9 /* CustomAnimation.swift */,
+				8CD517F7274064680082DCC9 /* ColorAnimation.swift */,
+				8CD517F52740645A0082DCC9 /* DirectionAnimation.swift */,
+				8CD517F9274064E10082DCC9 /* ColorStopsAnimation.swift */,
+				8CD517F1274064280082DCC9 /* EmptyAnimation.swift */,
+				8CD517F32740644D0082DCC9 /* CombineAnimation.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		8CD51800274118700082DCC9 /* FancyGradientTests */ = {
+			isa = PBXGroup;
+			children = (
+				8CD5180A27411FFC0082DCC9 /* Spy */,
+				8CD51801274118700082DCC9 /* FancyGradientTests.swift */,
+				8CD5180D274120F80082DCC9 /* CustomAnimationTests.swift */,
+				8CD51803274118700082DCC9 /* Info.plist */,
+			);
+			path = FancyGradientTests;
+			sourceTree = "<group>";
+		};
+		8CD5180A27411FFC0082DCC9 /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				8CD5180B2741201E0082DCC9 /* FancyGradientViewDelegateSpy.swift */,
+			);
+			path = Spy;
+			sourceTree = "<group>";
+		};
 		8CF14A9627369BC40039ECC4 = {
 			isa = PBXGroup;
 			children = (
 				8CF14AA227369BC40039ECC4 /* FancyGradient */,
+				8CD51800274118700082DCC9 /* FancyGradientTests */,
 				8CF14AA127369BC40039ECC4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				8CF14AA027369BC40039ECC4 /* FancyGradient.framework */,
+				8CD517FF274118700082DCC9 /* FancyGradientTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +137,7 @@
 		8CF14AA227369BC40039ECC4 /* FancyGradient */ = {
 			isa = PBXGroup;
 			children = (
+				8CD517E8274063010082DCC9 /* Utils */,
 				8CF14ADA273875110039ECC4 /* Animation */,
 				8CF14AA327369BC40039ECC4 /* FancyGradient.h */,
 				8CF14AA427369BC40039ECC4 /* Info.plist */,
@@ -67,7 +151,8 @@
 		8CF14ADA273875110039ECC4 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				8CF14ADB273875220039ECC4 /* Transition.swift */,
+				8CD517EC2740637E0082DCC9 /* Animationable.swift */,
+				8CD517F0274063F70082DCC9 /* Animations */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -86,6 +171,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		8CD517FE274118700082DCC9 /* FancyGradientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CD51807274118700082DCC9 /* Build configuration list for PBXNativeTarget "FancyGradientTests" */;
+			buildPhases = (
+				8CD517FB274118700082DCC9 /* Sources */,
+				8CD517FC274118700082DCC9 /* Frameworks */,
+				8CD517FD274118700082DCC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CD51806274118700082DCC9 /* PBXTargetDependency */,
+			);
+			name = FancyGradientTests;
+			productName = FancyGradientTests;
+			productReference = 8CD517FF274118700082DCC9 /* FancyGradientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8CF14A9F27369BC40039ECC4 /* FancyGradient */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8CF14AA827369BC40039ECC4 /* Build configuration list for PBXNativeTarget "FancyGradient" */;
@@ -110,8 +213,12 @@
 		8CF14A9727369BC40039ECC4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					8CD517FE274118700082DCC9 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 					8CF14A9F27369BC40039ECC4 = {
 						CreatedOnToolsVersion = 12.5.1;
 						LastSwiftMigration = 1250;
@@ -132,11 +239,19 @@
 			projectRoot = "";
 			targets = (
 				8CF14A9F27369BC40039ECC4 /* FancyGradient */,
+				8CD517FE274118700082DCC9 /* FancyGradientTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8CD517FD274118700082DCC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8CF14A9E27369BC40039ECC4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,20 +262,85 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8CD517FB274118700082DCC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CD5180E274120F80082DCC9 /* CustomAnimationTests.swift in Sources */,
+				8CD5180C2741201E0082DCC9 /* FancyGradientViewDelegateSpy.swift in Sources */,
+				8CD51802274118700082DCC9 /* FancyGradientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8CF14A9C27369BC40039ECC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8CF14AD32736ADA40039ECC4 /* FancyGradientView.swift in Sources */,
+				8CD517ED2740637E0082DCC9 /* Animationable.swift in Sources */,
+				8CD517EA2740632C0082DCC9 /* UIColor+Extensions.swift in Sources */,
 				8CF14AD92737077D0039ECC4 /* FancyGradientView+Animation.swift in Sources */,
-				8CF14ADC273875220039ECC4 /* Transition.swift in Sources */,
 				8CF14AD72736B4D10039ECC4 /* FancyGradientView+Model.swift in Sources */,
+				8CD517F2274064280082DCC9 /* EmptyAnimation.swift in Sources */,
+				8CD517F8274064680082DCC9 /* ColorAnimation.swift in Sources */,
+				8CD517F42740644D0082DCC9 /* CombineAnimation.swift in Sources */,
+				8CD517FA274064E10082DCC9 /* ColorStopsAnimation.swift in Sources */,
+				8CD517EF274063B70082DCC9 /* CustomAnimation.swift in Sources */,
+				8CD517F62740645A0082DCC9 /* DirectionAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8CD51806274118700082DCC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CF14A9F27369BC40039ECC4 /* FancyGradient */;
+			targetProxy = 8CD51805274118700082DCC9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		8CD51808274118700082DCC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FancyGradientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = kostasnik.fancyGradient.FancyGradientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+			};
+			name = Debug;
+		};
+		8CD51809274118700082DCC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FancyGradientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = kostasnik.fancyGradient.FancyGradientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+			};
+			name = Release;
+		};
 		8CF14AA627369BC40039ECC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -213,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -286,23 +466,28 @@
 		8CF14AA927369BC40039ECC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = FancyGradient/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = kostasnik.FancyGradient;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,23 +497,28 @@
 		8CF14AAA27369BC40039ECC4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = FancyGradient/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = kostasnik.FancyGradient;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -337,6 +527,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8CD51807274118700082DCC9 /* Build configuration list for PBXNativeTarget "FancyGradientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CD51808274118700082DCC9 /* Debug */,
+				8CD51809274118700082DCC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8CF14A9A27369BC40039ECC4 /* Build configuration list for PBXProject "FancyGradient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
