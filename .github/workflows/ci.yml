@@ -15,3 +15,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run FancyGradient unit tests
       run: xcodebuild clean test -workspace Fancy-Gradient.xcworkspace -scheme "FancyGradient"
+

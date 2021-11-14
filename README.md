@@ -98,7 +98,3 @@ let myCustomAnimation = CustomAnimation(animID: "myAnimationID")
             
 fancyView.animate(animation: myCustomAnimation)
 ```
-
-
-
-
