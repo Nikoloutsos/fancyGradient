@@ -304,6 +304,7 @@
 		8CD51808274118700082DCC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FancyGradientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -321,6 +322,7 @@
 		8CD51809274118700082DCC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FancyGradientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
