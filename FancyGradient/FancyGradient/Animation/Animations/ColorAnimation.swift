@@ -15,7 +15,7 @@ public class ColorAnimation: Animationable {
 
     lazy public var caAnimation: CAAnimation = {
         let animation = CABasicAnimation(keyPath: "colors")
-        animation.toValue = colors.map{ $0.cgColor }
+        animation.toValue = colors.map(\.cgColor)
         animation.duration = duration
         animation.fillMode = .forwards;
         animation.repeatCount = 1
@@ -30,8 +30,8 @@ public class ColorAnimation: Animationable {
     /// - Parameters:
     ///   - newColors: values should be hex strings (e.g #FF0000)
     ///   - duration: animation duration in seconds
-    public init(newColors: [String], duration: Double) {
-        self.colors = newColors.map{ .init(hexString: $0) }
+    public init(newColorsHex: [String], duration: Double) {
+        self.colors = newColorsHex.map{ .init(hexString: $0) }
         self.duration = duration
     }
 }
