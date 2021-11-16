@@ -45,6 +45,27 @@ fancyView.animate(animation: myCustomAnimation)
 
 ## Cocoapods
 
+
+[CocoaPods](http://cocoapods.org) is a dependency manager which integrates dependencies into your Xcode workspace. To install it using [RubyGems](https://rubygems.org/) run:
+
+```bash
+gem install cocoapods
+```
+
+To install FancyGradient using Cocoapods, simply add the following line to your Podfile:
+
+```ruby
+pod "FancyGradient"
+```
+
+Then run the command:
+
+```bash
+pod install
+```
+
+For more information [see here](https://cocoapods.org/#getstarted).
+
 # CustomAnimation
 Custom animation supports almost every complex animations.
 
