@@ -3,6 +3,9 @@
 </div>
 
 [![ci](https://github.com/Nikoloutsos/fancy-gradient/actions/workflows/ci.yml/badge.svg)](https://github.com/Nikoloutsos/fancy-gradient/actions/workflows/ci.yml)
+![Version](https://img.shields.io/cocoapods/v/FancyGradient.svg?style=flat)
+![Platform](https://img.shields.io/cocoapods/p/FancyGradient.svg?style=flat)
+[![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://swift.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 FancyGradient is a UIView subclass which let's you animate gradients in your iOS app. It is purely written in Swift.
