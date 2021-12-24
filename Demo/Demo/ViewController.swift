@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Demo
 //
-//  Created by Nikoloutsos, Konstantinos, Vodafone on 6/11/21.
+//  Created by Nikoloutsos, Konstantinos, Vodafone on 24/12/21.
 //
 
 import UIKit
@@ -24,15 +24,12 @@ class ViewController: UIViewController {
         fancyView.pinEdges(to: view)
 
         // Enable one at a time!
-
         demo()
 //        demo2()
 //        demo3()
 //        demo4()
 //        demo5()
     }
-
-
 
     func demo() {
         let myCustomAnimation = CustomAnimation(animID: "myAnimationID")
@@ -116,3 +113,4 @@ extension ViewController: FancyGradientViewDelegate {
         print("Finished animation \(animId)")
     }
 }
+

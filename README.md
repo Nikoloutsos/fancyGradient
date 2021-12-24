@@ -69,6 +69,11 @@ pod install
 
 For more information [see here](https://cocoapods.org/#getstarted).
 
+## Swift Package Manager
+
+Swift Package Manager is a dependency manager built right into Xcode.
+From the File menu, add a new Swift Package dependency to your project and paste in this project's Git URL.
+
 # CustomAnimation
 Custom animation supports almost every complex animations.
 
