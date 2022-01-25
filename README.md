@@ -15,6 +15,7 @@ FancyGradient is a UIView subclass which let's you animate gradients in your iOS
 
 # Quickstart
 
+
 Static gradient
 ```swift
 let fancyView = FancyGradientView(colors: [UIColor.black, UIColor.orange],
